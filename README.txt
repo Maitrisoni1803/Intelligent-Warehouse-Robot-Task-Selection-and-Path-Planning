@@ -1,4 +1,4 @@
-# 🤖 Intelligent Warehouse Robot
+# **🤖 Intelligent Warehouse Robot**
 ### AI-Based Task Selection and Path Planning Using A* Search
 
 <p align="center">
