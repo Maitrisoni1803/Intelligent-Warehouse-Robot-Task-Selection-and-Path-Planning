@@ -1,18 +1,14 @@
-# 🤖 Intelligent Warehouse Robot – Task Selection and Path Planning
+ 🤖 Intelligent Warehouse Robot – Task Selection and Path Planning
 
 ### AI-Based Warehouse Automation Using A* Search Algorithm
-
-<p align="center">
-  <strong>An Intelligent Robot Simulation for Automated Task Selection, Optimal Path Planning, Obstacle Avoidance, and Battery Management.</strong>
-</p>
 
 ---
 
 ## 📌 1. Project Overview
 
-The **Intelligent Warehouse Robot – Task Selection and Path Planning** project is a Python-based simulation that demonstrates how an autonomous robot can perform tasks efficiently inside a warehouse environment.
+The **Intelligent Warehouse Robot – Task Selection and Path Planning** is a Python-based project that demonstrates how an autonomous robot can perform tasks efficiently in a warehouse environment.
 
-In a warehouse, robots need to identify tasks, select which task to perform, navigate through different locations, avoid obstacles, and manage their battery levels.
+In a warehouse, robots need to select tasks, navigate between different locations, avoid obstacles, and manage their battery levels.
 
 This project uses **Artificial Intelligence (AI)** techniques and the **A* Search Algorithm** to help a robot make intelligent decisions and find suitable paths.
 
@@ -21,7 +17,7 @@ The simulation includes a grid-based warehouse, task prioritization, path planni
 ## 🎯 2. Project Objectives
 
 - Develop an intelligent warehouse robot simulation using Python.
-- Implement automatic task selection based on priority, urgency, and distance.
+- Implement automatic task selection based on priority, deadline urgency, and distance.
 - Apply the A* search algorithm for path planning.
 - Compare different heuristic functions.
 - Enable obstacle avoidance during robot movement.
@@ -32,8 +28,8 @@ The simulation includes a grid-based warehouse, task prioritization, path planni
 
 | Feature | Description |
 |---|---|
-| **Intelligent Task Selection** | Selects tasks using priority, deadline urgency, and distance. |
-| **A* Path Planning** | Finds a path from the robot's current position to its destination. |
+| **Intelligent Task Selection** | Selects tasks based on priority, deadline urgency, and distance. |
+| **A* Path Planning** | Finds a suitable path from the robot's current position to its destination. |
 | **Obstacle Avoidance** | Prevents the robot from moving through blocked warehouse cells. |
 | **Heuristic Comparison** | Compares Manhattan, Euclidean, Chebyshev, and Zero heuristics. |
 | **Battery Management** | Tracks battery consumption during robot movement. |
@@ -45,14 +41,14 @@ The simulation includes a grid-based warehouse, task prioritization, path planni
 
 | Technology | Purpose |
 |---|---|
-| **Python 3** | Main programming language |
-| **A* Search Algorithm** | Intelligent pathfinding |
-| **Heuristic Functions** | Estimate distance to the destination |
-| **Tkinter** | Graphical user interface |
-| **CSV** | Store heuristic comparison results |
-| **Jupyter Notebook** | Interactive execution and experimentation |
-| **Visual Studio Code** | Development environment |
-| **GitHub** | Project hosting and version control |
+| Python 3 | Main programming language |
+| A* Search Algorithm | Intelligent pathfinding |
+| Heuristic Functions | Estimate distance to the destination |
+| Tkinter | Graphical user interface |
+| CSV | Store heuristic comparison results |
+| Jupyter Notebook | Interactive execution and experimentation |
+| Visual Studio Code | Development environment |
+| GitHub | Project hosting and version control |
 
 ## 🧠 5. Algorithms and Methodology
 
@@ -155,11 +151,9 @@ Before running the project, make sure you have:
 - Visual Studio Code
 - Python extension for VS Code
 
-**Note:** The main simulation uses Python's standard library. Tkinter is included with many Python installations. No additional pip packages are required for the basic simulation.
+**Note:** The main simulation uses Python's standard library. No additional pip packages are required for the basic simulation. Tkinter should be available with your Python installation.
 
 ### Step 1: Clone the Repository
-
-Open the terminal and execute:
 
 ```bash
 git clone https://github.com/Maitrisoni1803/Intelligent-Warehouse-Robot-Task-Selection-and-Path-Planning.git
@@ -195,7 +189,7 @@ Execute the following command in the VS Code terminal:
 python main.py
 ```
 
-Or on Windows:
+On Windows, you can also use:
 
 ```bash
 py main.py
@@ -256,7 +250,7 @@ The project evaluates the A* algorithm using the following performance parameter
 | **Expanded Nodes** | Number of nodes explored during pathfinding. |
 | **Execution Time** | Time taken by the algorithm to find a path. |
 
-The heuristic comparison program generates the results for all four heuristic functions.
+The heuristic comparison program generates results for all four heuristic functions.
 
 These measurements help evaluate the efficiency of different heuristic approaches.
 
@@ -303,7 +297,7 @@ The project can be extended with the following improvements:
 
 **Maitri Soni**
 
-GitHub: [@Maitrisoni1803](https://github.com/Maitrisoni1803)
+**GitHub:** [@Maitrisoni1803](https://github.com/Maitrisoni1803)
 
 **Project:** Intelligent Warehouse Robot – Task Selection and Path Planning
 
@@ -317,8 +311,6 @@ The simulation helps understand how AI techniques can improve warehouse navigati
 
 ---
 
-<p align="center">
-  <strong>🤖 Intelligent Warehouse Robot | AI-Based Path Planning | Python</strong>
-  <br>
-  <em>Thank you for visiting this repository!</em>
-</p>
+**🤖 Intelligent Warehouse Robot | AI-Based Path Planning | Python**
+
+*Thank you for visiting this repository!*
