@@ -1,4 +1,4 @@
- 🤖 Intelligent Warehouse Robot – Task Selection and Path Planning
+ 🤖 **Intelligent Warehouse Robot – Task Selection and Path Planning**
 
 ### AI-Based Warehouse Automation Using A* Search Algorithm
 
