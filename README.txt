@@ -352,18 +352,3 @@ Through this project, we explored:
 - Algorithm performance evaluation.
 - Python GUI development and simulation.
 
-## 👩‍💻 Author
-
-**Maitri Soni**
-
-GitHub: [@Maitrisoni1803](https://github.com/Maitrisoni1803)
-
-**Project:** Intelligent Warehouse Robot – Task Selection and Path Planning
-
----
-
-<p align="center">
-  <b>Built with Python and Artificial Intelligence 🤖</b>
-  <br>
-  <i>Exploring intelligent automation through task selection and efficient path planning.</i>
-</p>
