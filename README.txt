@@ -1,159 +1,165 @@
-# **🤖 Intelligent Warehouse Robot**
-### AI-Based Task Selection and Path Planning Using A* Search
+# 🤖 Intelligent Warehouse Robot – Task Selection and Path Planning
+
+### AI-Based Warehouse Automation Using A* Search Algorithm
 
 <p align="center">
-  <b>A Python-based warehouse simulation using Artificial Intelligence, heuristic search, and intelligent task selection.</b>
+  <strong>An Intelligent Robot Simulation for Automated Task Selection, Optimal Path Planning, Obstacle Avoidance, and Battery Management.</strong>
 </p>
 
 ---
 
-## 📌 Project Overview
+## 📌 1. Project Overview
 
-The **Intelligent Warehouse Robot** is an AI-based simulation designed to demonstrate how an autonomous robot can perform tasks inside a warehouse environment.
+The **Intelligent Warehouse Robot – Task Selection and Path Planning** project is a Python-based simulation that demonstrates how an autonomous robot can perform tasks efficiently inside a warehouse environment.
 
-In a warehouse, robots need to identify tasks, select which task to perform, find the shortest possible path, avoid obstacles, and manage their battery efficiently.
+In a warehouse, robots need to identify tasks, select which task to perform, navigate through different locations, avoid obstacles, and manage their battery levels.
 
-This project implements an intelligent warehouse robot using **A* (A-Star) Search**, heuristic functions, task-priority selection, and battery-aware navigation.
+This project uses **Artificial Intelligence (AI)** techniques and the **A* Search Algorithm** to help a robot make intelligent decisions and find suitable paths.
 
-The robot operates in a grid-based warehouse containing obstacles, task locations, a packing station, and a charging station. It automatically selects tasks, plans routes, moves through the warehouse, and returns for charging when required.
+The simulation includes a grid-based warehouse, task prioritization, path planning, battery monitoring, a charging station, and a graphical user interface.
 
-The project also includes a graphical user interface (GUI) to visualize the robot's movement and a heuristic comparison module to evaluate different pathfinding strategies.
+## 🎯 2. Project Objectives
 
-## 🎯 Project Objectives
+- Develop an intelligent warehouse robot simulation using Python.
+- Implement automatic task selection based on priority, urgency, and distance.
+- Apply the A* search algorithm for path planning.
+- Compare different heuristic functions.
+- Enable obstacle avoidance during robot movement.
+- Monitor battery consumption and charging requirements.
+- Visualize robot movement through a graphical user interface.
 
-- Develop an intelligent robot for a grid-based warehouse environment.
-- Implement A* search for efficient path planning.
-- Select tasks based on priority, deadline urgency, and distance.
-- Avoid obstacles while navigating through the warehouse.
-- Monitor battery consumption and manage recharging.
-- Compare different heuristic functions used in A* search.
-- Visualize robot movement through a graphical interface.
-
-## ✨ Key Features
+## ✨ 3. Key Features
 
 | Feature | Description |
 |---|---|
-| 🧠 Intelligent Task Selection | Selects tasks using priority, urgency, and distance. |
-| 🗺️ A* Path Planning | Finds a path through the warehouse grid. |
-| 🚧 Obstacle Avoidance | Prevents movement through blocked cells. |
-| 🔋 Battery Management | Tracks battery usage and charging requirements. |
-| 📦 Packing Station | Provides a destination for completed warehouse tasks. |
-| 🔌 Charging Station | Allows the robot to recharge its battery. |
-| 📊 Heuristic Comparison | Compares four heuristic functions. |
-| 🖥️ Graphical Interface | Displays and controls the robot simulation. |
+| **Intelligent Task Selection** | Selects tasks using priority, deadline urgency, and distance. |
+| **A* Path Planning** | Finds a path from the robot's current position to its destination. |
+| **Obstacle Avoidance** | Prevents the robot from moving through blocked warehouse cells. |
+| **Heuristic Comparison** | Compares Manhattan, Euclidean, Chebyshev, and Zero heuristics. |
+| **Battery Management** | Tracks battery consumption during robot movement. |
+| **Charging Station** | Allows the robot to recharge when required. |
+| **Graphical Interface** | Displays the warehouse and robot simulation visually. |
+| **Performance Analysis** | Compares path cost, expanded nodes, and execution time. |
 
-## 🛠️ Technologies Used
+## 🛠️ 4. Technologies Used
 
-- **Programming Language:** Python
-- **Artificial Intelligence:** A* Search Algorithm
-- **Pathfinding:** Heuristic Search
-- **Visualization:** Tkinter
-- **Data Handling:** CSV
-- **Development Environment:** Visual Studio Code and Jupyter Notebook
+| Technology | Purpose |
+|---|---|
+| **Python 3** | Main programming language |
+| **A* Search Algorithm** | Intelligent pathfinding |
+| **Heuristic Functions** | Estimate distance to the destination |
+| **Tkinter** | Graphical user interface |
+| **CSV** | Store heuristic comparison results |
+| **Jupyter Notebook** | Interactive execution and experimentation |
+| **Visual Studio Code** | Development environment |
+| **GitHub** | Project hosting and version control |
 
-## 🧠 Algorithms and Methodology
+## 🧠 5. Algorithms and Methodology
 
-### 1. A* Search Algorithm
+### 5.1 A* Search Algorithm
 
-A* is an informed search algorithm used to find an efficient path between a starting point and a destination.
+A* is an informed search algorithm used to find an efficient path between two points.
 
-It evaluates each node using:
+It calculates the estimated total cost using:
 
 **f(n) = g(n) + h(n)**
 
 Where:
 
-- `g(n)` = Actual cost from the starting point to the current node.
-- `h(n)` = Estimated cost from the current node to the destination.
-- `f(n)` = Total estimated cost of the path.
+- **g(n):** Actual cost from the starting point to the current node.
+- **h(n):** Estimated cost from the current node to the destination.
+- **f(n):** Estimated total path cost.
 
-The algorithm selects the node with the lowest estimated total cost and continues until it reaches the destination.
+### 5.2 Heuristic Functions
 
-### 2. Heuristic Functions
-
-This project compares four heuristic approaches:
+The project compares four heuristic functions:
 
 | Heuristic | Description |
 |---|---|
-| Manhattan Distance | Calculates distance using horizontal and vertical movement. |
-| Euclidean Distance | Calculates straight-line distance between two points. |
-| Chebyshev Distance | Uses the maximum difference between horizontal and vertical coordinates. |
-| Zero Heuristic | Uses zero as the estimated remaining cost, behaving like Uniform Cost Search. |
+| **Manhattan Distance** | Calculates distance using horizontal and vertical movements. |
+| **Euclidean Distance** | Calculates straight-line distance between two points. |
+| **Chebyshev Distance** | Calculates distance using the maximum coordinate difference. |
+| **Zero Heuristic** | Uses zero as the estimated remaining cost, similar to Dijkstra's algorithm. |
 
-The comparison helps understand how heuristic selection affects search efficiency.
+### 5.3 Intelligent Task Selection
 
-### 3. Intelligent Task Selection
+The robot selects tasks based on three important factors:
 
-The robot selects tasks using a simple scoring strategy based on:
+1. **Priority:** Importance of the task.
+2. **Deadline Urgency:** How soon the task needs to be completed.
+3. **Distance:** How far the robot is from the task location.
 
-- Task priority
-- Deadline urgency
-- Distance from the robot
+The task-selection logic uses a configurable scoring rule to decide which task should be performed.
 
-The task-selection logic is implemented in `agent.py`.
+### 5.4 Battery Management
 
-### 4. Battery Management
+The robot starts with a battery capacity of **100 units**.
 
-The robot starts with a limited battery capacity.
+- Each movement consumes one battery unit.
+- The robot monitors its remaining battery.
+- A reserve battery level is maintained.
+- The robot considers the charging station when its battery is insufficient for the planned journey.
 
-- Each movement step consumes one battery unit.
-- The robot checks whether its battery is sufficient for the planned journey and reserve.
-- It uses the charging station when additional battery power is required.
+## 🔄 6. Project Workflow
 
-This helps demonstrate battery-aware navigation.
+The following flowchart represents the overall working process of the warehouse robot.
 
-## 🏗️ Project Architecture
-
-The project is organized into separate Python modules, with each file responsible for a specific part of the simulation.
-
-| File | Purpose |
-|---|---|
-| `main.py` | Runs the complete warehouse robot simulation. |
-| `gui.py` | Provides the graphical interface for the simulation. |
-| `warehouse.py` | Loads and represents the warehouse grid. |
-| `agent.py` | Handles robot behavior and intelligent task selection. |
-| `astar.py` | Implements A* search and heuristic functions. |
-| `tasks.py` | Stores task, charging, and battery configurations. |
-| `compare_heuristics.py` | Compares the performance of four heuristics. |
-| `map.txt` | Contains the warehouse grid layout. |
-| `heuristic_comparison.csv` | Stores heuristic comparison results. |
-| `compare_heuristics (1).ipynb` | Jupyter Notebook for exploring heuristic comparison. |
-
-## 📂 Repository Structure
-
-```text
-Intelligent-Warehouse-Robot/
-│
-├── agent.py
-├── astar.py
-├── compare_heuristics.py
-├── compare_heuristics (1).ipynb
-├── gui.py
-├── main.py
-├── tasks.py
-├── warehouse.py
-├── map.txt
-├── heuristic_comparison.csv
-│
-├── README.md
-└── Warehouse_Robot_AI_Course Project.zip
+```mermaid
+flowchart TD
+    A([Start]) --> B[Load Warehouse Grid]
+    B --> C[Initialize Robot and Battery]
+    C --> D[Load Available Tasks]
+    D --> E{Tasks Available?}
+    E -- No --> K[Display Final Results]
+    E -- Yes --> F[Calculate Task Scores]
+    F --> G[Select Best Task]
+    G --> H[Check Battery Level]
+    H --> I{Battery Sufficient?}
+    I -- No --> J[Navigate to Charging Station]
+    J --> L[Recharge Battery]
+    L --> M[Plan Path Using A*]
+    I -- Yes --> M
+    M --> N[Avoid Obstacles and Move]
+    N --> O[Reach Task Location]
+    O --> P[Complete Task]
+    P --> Q[Update Battery and Task Status]
+    Q --> E
+    K --> R([End])
 ```
 
-## ⚙️ Installation and Setup
+## 📂 7. Project Folder Structure
+
+The repository contains the following files:
+
+| File Name | Description |
+|---|---|
+| `main.py` | Runs the complete warehouse robot simulation. |
+| `gui.py` | Provides the graphical warehouse simulation. |
+| `warehouse.py` | Loads and represents the warehouse grid. |
+| `agent.py` | Implements robot decision-making and task selection. |
+| `astar.py` | Implements the A* pathfinding algorithm and heuristics. |
+| `tasks.py` | Stores task information, battery settings, and charger details. |
+| `compare_heuristics.py` | Compares the performance of different heuristic functions. |
+| `compare_heuristics (1).ipynb` | Jupyter Notebook for interactive heuristic comparison. |
+| `map.txt` | Contains the warehouse grid layout. |
+| `heuristic_comparison.csv` | Stores heuristic comparison results. |
+| `README.md` | Project documentation. |
+
+## ⚙️ 8. Installation and Setup
 
 ### Prerequisites
 
 Before running the project, make sure you have:
 
-- Python 3.9 or above
+- Python 3.9 or newer
 - Visual Studio Code
 - Python extension for VS Code
 
-**Note:** The project uses Python's built-in Tkinter library for the GUI. No additional pip packages are normally required for the supplied simulation.
+**Note:** The main simulation uses Python's standard library. Tkinter is included with many Python installations. No additional pip packages are required for the basic simulation.
 
 ### Step 1: Clone the Repository
 
-Open your terminal and execute:
+Open the terminal and execute:
 
 ```bash
 git clone https://github.com/Maitrisoni1803/Intelligent-Warehouse-Robot-Task-Selection-and-Path-Planning.git
@@ -173,15 +179,15 @@ Open the folder in Visual Studio Code.
 python --version
 ```
 
-If you are using Windows and the above command does not work, try:
+On Windows, you can also use:
 
 ```bash
 py --version
 ```
 
-## ▶️ How to Run the Project
+## ▶️ 9. How to Run the Project
 
-### 1. Run the Complete Simulation
+### A. Run the Complete Simulation
 
 Execute the following command in the VS Code terminal:
 
@@ -189,166 +195,130 @@ Execute the following command in the VS Code terminal:
 python main.py
 ```
 
-This runs the complete warehouse robot simulation in the terminal.
+Or on Windows:
 
-### 2. Run the Graphical User Interface
+```bash
+py main.py
+```
 
-To visualize the robot's movement, execute:
+This runs the complete warehouse robot simulation.
+
+### B. Run the Graphical User Interface
+
+To see the robot moving visually inside the warehouse, execute:
 
 ```bash
 python gui.py
 ```
 
-The GUI provides controls to interact with the simulation:
+**GUI Controls:**
 
-- **Start Simulation:** Starts automatic robot movement.
-- **Pause:** Pauses the simulation.
-- **Next Step:** Moves the simulation forward one step.
-- **Reset:** Resets the simulation.
+| Button | Function |
+|---|---|
+| **Start Simulation** | Starts automatic robot movement. |
+| **Pause** | Pauses the simulation. |
+| **Next Step** | Moves the robot to the next step. |
+| **Reset** | Restarts the simulation. |
 
-### 3. Run the Heuristic Comparison
+### C. Run Heuristic Comparison
 
-Execute:
+To compare the four heuristic functions, execute:
 
 ```bash
 python compare_heuristics.py
 ```
 
-This runs the comparison of Manhattan, Euclidean, Chebyshev, and Zero heuristics.
-
-The results are saved in:
+The program generates comparison results, which can be viewed in:
 
 ```text
 heuristic_comparison.csv
 ```
 
-## 📓 Running the Jupyter Notebook
+### D. Run Using Jupyter Notebook
 
-The project also includes a Jupyter Notebook for exploring the heuristic comparison.
+Open the notebook:
 
-1. Open the project folder in VS Code.
-2. Open the `.ipynb` notebook file.
-3. Select the Python kernel.
-4. Click **Run All**.
-5. Review the outputs and comparison results.
-
-To execute the Python simulation from a notebook cell, you can also use:
-
-```python
-%run main.py
+```text
+compare_heuristics (1).ipynb
 ```
 
-To run the heuristic comparison:
+Select the Python kernel and click **Run All** to execute the notebook cells.
 
-```python
-%run compare_heuristics.py
-```
+**Note:** The graphical interface runs in a separate desktop window, not directly inside the notebook output.
 
-For the graphical interface, run `gui.py` from the VS Code terminal because it opens a separate desktop window.
+## 📊 10. Performance Evaluation
 
-## 📊 Performance Evaluation
+The project evaluates the A* algorithm using the following performance parameters:
 
-The project evaluates the performance of different heuristic functions using:
+| Parameter | Meaning |
+|---|---|
+| **Path Cost** | Total cost of the path found by the algorithm. |
+| **Expanded Nodes** | Number of nodes explored during pathfinding. |
+| **Execution Time** | Time taken by the algorithm to find a path. |
 
-- **Path Cost:** Total movement cost of the selected path.
-- **Expanded Nodes:** Number of nodes explored during the search.
-- **Execution Time:** Time taken by the search algorithm.
+The heuristic comparison program generates the results for all four heuristic functions.
 
-The comparison uses a fixed route sequence to evaluate the heuristic approaches under the same conditions.
+These measurements help evaluate the efficiency of different heuristic approaches.
 
-The CSV file contains the generated comparison results and can be opened using Excel, VS Code, or Python.
+## 🗺️ 11. Warehouse Map Representation
 
-## 🗺️ Warehouse Environment
-
-The warehouse is represented as a two-dimensional grid.
+The warehouse environment is represented using a grid.
 
 | Symbol | Meaning |
 |---|---|
-| `#` | Obstacle or blocked shelf |
-| `.` | Free movement area |
+| `#` | Blocked cell / Shelf / Wall |
+| `.` | Open floor |
 | `S` | Robot starting position |
 | `P` | Packing station |
 
-The robot moves in four directions: up, down, left, and right.
+**Coordinate System:**
 
-Coordinates are represented as `(row, column)`, starting from zero at the top-left corner.
+- Coordinates are represented as `(row, column)`.
+- The top-left corner starts at `(0, 0)`.
+- The robot moves in four directions: Up, Down, Left, and Right.
 
-## 🔍 Expected Project Workflow
+**Important:** If you modify the warehouse map, update the corresponding task coordinates in `tasks.py`.
 
-```text
-        Start Simulation
-                |
-                v
-       Load Warehouse Map
-                |
-                v
-       Initialize Robot
-                |
-                v
-        Identify Tasks
-                |
-                v
-      Select Best Task
-                |
-                v
-       Plan Path Using A*
-                |
-                v
-      Check Battery Level
-                |
-          +-----+-----+
-          |           |
-       Enough       Not Enough
-          |           |
-          |           v
-          |      Visit Charging
-          |         Station
-          |           |
-          +-----<-----+
-                |
-                v
-       Navigate to Task
-                |
-                v
-       Complete Task
-                |
-                v
-       Continue Until
-        Tasks Complete
-                |
-                v
-             End
-```
+## ⚠️ 12. Project Limitations
 
-## ⚠️ Project Limitations
+- This project is a simulated warehouse environment, not a physical robot.
+- The warehouse obstacles are static in the supplied demonstration.
+- Robot movement is limited to four directions.
+- Task deadlines are used as an urgency input and do not represent a real-time deadline guarantee.
+- The heuristic comparison uses a fixed route sequence to support a fair comparison of pathfinding methods.
 
-- This is a simulated warehouse environment, not a physical robot.
-- The supplied warehouse obstacles are static.
-- The robot operates as a single-agent system.
-- Deadline values are used as urgency inputs; real-time deadline completion is not guaranteed.
-- The heuristic comparison uses a fixed route sequence for a fair comparison.
+## 🚀 13. Future Enhancements
 
-## 🚀 Future Enhancements
+The project can be extended with the following improvements:
 
-The project can be extended with:
-
-- Multiple autonomous warehouse robots.
+- Multiple robots working together in the same warehouse.
 - Dynamic obstacle detection and avoidance.
-- Real-time task scheduling.
-- Improved battery optimization.
+- Real-time task allocation and scheduling.
+- Advanced battery optimization.
+- Integration with real robotic hardware.
 - Machine learning-based task prioritization.
-- Real-world robot integration.
-- Advanced warehouse visualization.
+- Live warehouse monitoring and analytics dashboard.
 
-## 🎓 Learning Outcomes
+## 👩‍💻 14. Author
 
-Through this project, we explored:
+**Maitri Soni**
 
-- Artificial Intelligence and informed search.
-- A* pathfinding and heuristic functions.
-- Task selection and decision-making.
-- Grid-based environment modeling.
-- Battery-aware robot navigation.
-- Algorithm performance evaluation.
-- Python GUI development and simulation.
+GitHub: [@Maitrisoni1803](https://github.com/Maitrisoni1803)
 
+**Project:** Intelligent Warehouse Robot – Task Selection and Path Planning
+
+## ⭐ 15. Conclusion
+
+The Intelligent Warehouse Robot project demonstrates how Artificial Intelligence and search algorithms can be applied to warehouse automation.
+
+By combining intelligent task selection, A* path planning, heuristic comparison, obstacle avoidance, and battery management, the project provides a practical example of autonomous robot decision-making.
+
+The simulation helps understand how AI techniques can improve warehouse navigation and task execution.
+
+---
+
+<p align="center">
+  <strong>🤖 Intelligent Warehouse Robot | AI-Based Path Planning | Python</strong>
+  <br>
+  <em>Thank you for visiting this repository!</em>
+</p>
