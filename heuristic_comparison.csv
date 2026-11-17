@@ -1,0 +1,5 @@
+heuristic,total_path_cost,nodes_expanded,execution_time_ms
+manhattan,46,117,1.1351
+euclidean,46,136,1.4531
+chebyshev,46,155,1.5206
+zero,46,298,2.7197
